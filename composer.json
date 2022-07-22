@@ -1,0 +1,21 @@
+{
+    "name": "fadarrizz/alfred-alpinejs-docs",
+    "description": "A Alpine JS docs search workflow for Alfred.",
+    "version": "0.1",
+    "keywords": ["alfred", "alfred-workflow", "alpinejs", "algolia"],
+    "support": {
+        "source": "https://github.com/fadarrizz/alfred-alpinejs-docs",
+        "issues": "https://github.com/fadarrizz/alfred-alpinejs-docs/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fadarrizz",
+            "email": "auk.geerts@gmail.com"
+        }
+    ],
+    "require": {
+        "joetannenbaum/alfred-workflow": "^0.1.2",
+        "algolia/algoliasearch-client-php": "^3.3"
+    }
+}
