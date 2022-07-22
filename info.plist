@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.fadarrizz.alfred-alpinejs-docs</string>
+	<key>connections</key>
+	<dict>
+		<key>61B7171B-7133-4CF0-A3F4-676D53EBFE5E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C19A8A30-C2AC-4ACA-B00D-4ABD171CE632</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Auke Geerts</string>
+	<key>description</key>
+	<string>An Alpine.js docs search workflow</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Alpine.js Docs</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>alp</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching docs for "{query}"...</string>
+				<key>script</key>
+				<string>if [ -f "/opt/homebrew/bin/php" ]; then
+    /opt/homebrew/bin/php alpinejs.php "{query}"
+elif [ -f "/usr/local/bin/php" ]; then
+    /usr/local/bin/php alpinejs.php "{query}"
+elif [ -f "/usr/bin/php" ]; then
+    /usr/bin/php alpinejs.php "{query}"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search the Alpine.js docs...</string>
+				<key>title</key>
+				<string>Alpine.js Docs</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>61B7171B-7133-4CF0-A3F4-676D53EBFE5E</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>C19A8A30-C2AC-4ACA-B00D-4ABD171CE632</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Alpine.js docs search workflow for Alfred
+
+An Alpine.js docs search workflow for [Alfred](https://www.alfredapp.com).
+
+![Screenshot](screenshot.png)
+
+
+## Installation
+
+1. [Download the latest version](https://github.com/Fadarrizz/alfred-alpinejs-docs/releases/download/latest/alpinejs-docs.alfredworkflow)
+2. Install the workflow by double-clicking the `.alfredworkflow` file
+3. You can add the workflow to a category, then click "Import" to finish importing. You'll now see the workflow listed in the left sidebar of your Workflows preferences pane.
+
+
+## Usage
+
+Just type `alp` followed by your search query:
+
+```
+alp &lt;query&gt;
+alp x-model
+```
+
+Either press `⌘Y` to Quick Look the result, or press `&lt;enter&gt;` to open it in your web browser.
+
+
+## Credits
+
+This workflow is based on Till Kruss' [Laravel Docs workflow](https://github.com/tillkruss/alfred-laravel-docs).</string>
+	<key>uidata</key>
+	<dict>
+		<key>61B7171B-7133-4CF0-A3F4-676D53EBFE5E</key>
+		<dict>
+			<key>xpos</key>
+			<real>200</real>
+			<key>ypos</key>
+			<real>195</real>
+		</dict>
+		<key>C19A8A30-C2AC-4ACA-B00D-4ABD171CE632</key>
+		<dict>
+			<key>xpos</key>
+			<real>510</real>
+			<key>ypos</key>
+			<real>195</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.1</string>
+	<key>webaddress</key>
+	<string>https://github.com/Fadarrizz/alfred-alpinejs-docs</string>
+</dict>
+</plist>
